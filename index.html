@@ -1,37 +1,57 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/src/index.css">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="theme-color" content="#000000" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /><!--Do not delee-->
     <title>React App</title>
-</head>
-
-<body>
+  </head>
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
 
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script type="text/bable" src="/src/App.js"></script>
+    <!-- Sidebar -->
+    <nav>
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+          <button onclick="w3_close()" class="w3-bar-item">Close &times;</button>
+          <a href="#" class="w3-bar-item w3-button">Link 1</a>
+          <a href="#" class="w3-bar-item w3-button">Link 2</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+            <!-- Page Content -->
+        <div id = 'navBar' class="navBar2">
+          <button class="w3-button w3-teal w3-xxxlarge" onclick="w3_open()">☰</button>
+        </div>
+    </nav>
 
+    <div id="root">
+
+    </div>
+    <script>
+      function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("root").style.opacity = ".25";
+            document.getElementById("navBar").style.opacity = ".25";
+            }
+
+function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("root").style.opacity = "1";
+            document.getElementById("navBar").style.opacity = "1";
+            }
+              
+     </script>
+
+  </body>
 </html>
